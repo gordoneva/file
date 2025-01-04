@@ -1,0 +1,16 @@
+nano ~/start_terminal.sh
+#!/bin/bash
+# Запускает терминал при загрузке
+
+# Укажите терминал, который хотите открыть (например, gnome-terminal или xterm)
+gnome-terminal &
+chmod +x ~/start_terminal.sh
+nano ~/.config/autostart/start_terminal.desktop
+[Desktop Entry]
+Type=Application
+Exec=/home/YOUR_USERNAME/start_terminal.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Start Terminal
+Comment=Запуск терминала при старте системы
